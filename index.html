@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///C:/Users/bloss/Downloads/task-eagles-website.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Eagles - Reliable Errand &amp; Personal Shopper Services in Abuja</title>
+    <meta name="description" content="Professional errand and personal shopper services in Abuja. We handle your errands so you can focus on what matters most.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header/Navigation */
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5986 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        
+        .cta-button {
+            background: #4db8d8;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: #3a9db8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(77, 184, 216, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.95), rgba(45, 89, 134, 0.95)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e3a5f" width="1200" height="600"/></svg>');
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #4db8d8;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #3a9db8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(77, 184, 216, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            border: 2px solid white;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a5f;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: #1e3a5f;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #4db8d8;
+            margin: 20px auto 0;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-left: 4px solid #4db8d8;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .service-card h3 {
+            color: #1e3a5f;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .service-card p {
+            color: #666;
+            font-size: 15px;
+        }
+        
+        /* Perfect For Section */
+        .perfect-for {
+            background: #f8f9fa;
+        }
+        
+        .perfect-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .perfect-tag {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            color: #333;
+            border: 2px solid #4db8d8;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .perfect-tag:hover {
+            background: #4db8d8;
+            color: white;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5986 100%);
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #4db8d8;
+        }
+        
+        .contact-card h3 {
+            color: #4db8d8;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: #4db8d8;
+        }
+        
+        .whatsapp-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 20px 50px;
+            border-radius: 35px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #1fb855;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .logo-text {
+                font-size: 20px;
+            }
+            
+            .section {
+                padding: 50px 20px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./website Task Eagles - Reliable Errand &amp; Personal Shopper Services in Abuja_files/dc4914b0-3834-4417-a59e-6ef7ca286362-removebg-preview.png" alt="Task Eagles Logo">
+                <span class="logo-text">TASK EAGLES</span>
+            </div>
+            <a href="https://wa.me/2348173782942" class="cta-button">📱 WhatsApp Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Don't Let Your Errands Run You</h1>
+            <p>Professional errand and personal shopper services in Abuja. We handle the tasks so you can focus on what truly matters.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/2348173782942" class="btn-primary">Get Started Today</a>
+                <a href="file:///C:/Users/bloss/Downloads/task-eagles-website.html#services" class="btn-secondary">View Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>Market Runs &amp; Grocery Shopping</h3>
+                <p>We'll handle your grocery shopping and market runs, delivering fresh items right to your doorstep.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚌</div>
+                <h3>School Runs &amp; Pickups</h3>
+                <p>Safe and reliable transportation for your children to and from school.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✈️</div>
+                <h3>Airport Pickup/Drop Off</h3>
+                <p>Stress-free airport transfers for you, your family, or guests.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🍽️</div>
+                <h3>Food Delivery</h3>
+                <p>Hot meals delivered from your favorite restaurants and fast food joints.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👕</div>
+                <h3>Laundry Pickup/Drop Off</h3>
+                <p>We collect, wash, and return your laundry fresh and clean.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏡</div>
+                <h3>Housekeeping</h3>
+                <p>Eco-friendly and flexible housekeeping services tailored to your needs.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Custom Errands &amp; More</h3>
+                <p>Anything you don't have time to do - we've got you covered!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect For Section -->
+    <section class="section perfect-for">
+        <h2 class="section-title">Perfect For</h2>
+        <div class="perfect-tags">
+            <span class="perfect-tag">✓ Busy Parents</span>
+            <span class="perfect-tag">✓ Full-Time Workers</span>
+            <span class="perfect-tag">✓ Busy Employees</span>
+            <span class="perfect-tag">✓ Businesses</span>
+            <span class="perfect-tag">✓ Anyone Who Values Time</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+        <h2 class="section-title" style="color: white;">Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Our Locations</h3>
+                <div class="contact-item">
+                    <strong>Office 1:</strong><br>
+                    Suits D002B Cater Plaza, Ademola Adetokunbo Crescent, Wuse II, Abuja
+                </div>
+                <div class="contact-item">
+                    <strong>Office 2:</strong><br>
+                    Suit A3 Omega Plaza, Mpape, FCT
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    📞 <strong>Phone:</strong><br>
+                    <a href="tel:09028896821">09028896821</a>, <a href="tel:07025661351">07025661351</a>
+                </div>
+                <div class="contact-item">
+                    💬 <strong>WhatsApp:</strong><br>
+                    <a href="https://wa.me/2348173782942">08173782942</a>
+                </div>
+                <div class="contact-item" style="margin-top: 20px; opacity: 0.9;">
+                    Available for all your errand needs across Abuja and FCT
+                </div>
+            </div>
+        </div>
+        
+        <div class="whatsapp-cta">
+            <a href="https://wa.me/2348173782942" class="whatsapp-btn">💬 Chat With Us on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Task Eagles. All rights reserved.</p>
+        <p style="margin-top: 10px;">Powered by Lady B Bath Ventures Int.</p>
+    </footer>
+
+</body></html>
