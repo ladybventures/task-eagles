@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0057)file:///C:/Users/bloss/Downloads/task-eagles-website.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Eagles - Reliable Errand &amp; Personal Shopper Services in Abuja</title>
-    <meta name="description" content="Professional errand and personal shopper services in Abuja. We handle your errands so you can focus on what matters most.">
+    <title>Task Eagles - Professional Errand Services in Abuja | Let Us Handle Your Tasks</title>
+    <meta name="description" content="Task Eagles provides reliable errand and personal shopper services across Abuja. From grocery shopping to airport transfers, we handle your daily tasks so you can focus on what matters.">
     <style>
         * {
             margin: 0;
@@ -36,6 +36,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         
         .logo {
@@ -47,12 +49,30 @@
         .logo img {
             width: 50px;
             height: 50px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
         
         .logo-text {
             font-size: 28px;
             font-weight: 800;
             letter-spacing: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #4db8d8;
         }
         
         .cta-button {
@@ -64,6 +84,7 @@
             font-weight: 600;
             transition: all 0.3s;
             display: inline-block;
+            white-space: nowrap;
         }
         
         .cta-button:hover {
@@ -74,9 +95,12 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(30, 58, 95, 0.95), rgba(45, 89, 134, 0.95)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e3a5f" width="1200" height="600"/></svg>');
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.92), rgba(45, 89, 134, 0.92)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(77,184,216,0.1)" stroke-width="1"/></pattern></defs><rect width="1200" height="800" fill="%231e3a5f"/><rect width="1200" height="800" fill="url(%23grid)"/></svg>');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
         
@@ -86,15 +110,26 @@
         }
         
         .hero h1 {
-            font-size: 48px;
+            font-size: 52px;
             margin-bottom: 20px;
             font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 24px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            font-weight: 600;
         }
         
         .hero p {
-            font-size: 22px;
-            margin-bottom: 30px;
-            opacity: 0.95;
+            font-size: 18px;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero-buttons {
@@ -107,7 +142,7 @@
         .btn-primary {
             background: #4db8d8;
             color: white;
-            padding: 15px 40px;
+            padding: 18px 45px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
@@ -125,7 +160,7 @@
         .btn-secondary {
             background: transparent;
             color: white;
-            padding: 15px 40px;
+            padding: 18px 45px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
@@ -149,10 +184,20 @@
         
         .section-title {
             text-align: center;
-            font-size: 36px;
+            font-size: 38px;
             color: #1e3a5f;
-            margin-bottom: 50px;
+            margin-bottom: 15px;
             font-weight: 700;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .section-title::after {
@@ -164,17 +209,106 @@
             margin: 20px auto 0;
         }
         
+        /* About Section */
+        .about-section {
+            background: #f8f9fa;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .stat-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: #4db8d8;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background: white;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .step-card {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #4db8d8, #3a9db8);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(77, 184, 216, 0.3);
+        }
+        
+        .step-card h3 {
+            color: #1e3a5f;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .step-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
         /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
         
         .service-card {
             background: white;
-            padding: 30px;
+            padding: 35px;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: all 0.3s;
@@ -182,54 +316,124 @@
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
         }
         
         .service-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
         }
         
         .service-card h3 {
             color: #1e3a5f;
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
         
         .service-card p {
             color: #666;
             font-size: 15px;
+            line-height: 1.7;
         }
         
-        /* Perfect For Section */
-        .perfect-for {
+        /* Testimonials */
+        .testimonials {
             background: #f8f9fa;
         }
         
-        .perfect-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            max-width: 800px;
-            margin: 0 auto;
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
         
-        .perfect-tag {
+        .testimonial-card {
             background: white;
-            padding: 15px 25px;
-            border-radius: 30px;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .quote-icon {
+            font-size: 48px;
+            color: #4db8d8;
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            left: 25px;
+        }
+        
+        .testimonial-text {
             font-size: 16px;
-            color: #333;
-            border: 2px solid #4db8d8;
-            font-weight: 500;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 16px;
+        }
+        
+        .testimonial-role {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .rating {
+            color: #ffd700;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
             transition: all 0.3s;
         }
         
-        .perfect-tag:hover {
-            background: #4db8d8;
-            color: white;
+        .faq-item:hover {
+            border-color: #4db8d8;
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 25px 20px 25px;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.7;
         }
         
         /* Contact Section */
@@ -238,53 +442,64 @@
             color: white;
         }
         
-        .contact-grid {
+        .contact-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
         }
         
-        .contact-card {
+        .contact-info-box {
             background: rgba(255,255,255,0.1);
-            padding: 30px;
+            padding: 40px;
             border-radius: 15px;
             border-left: 4px solid #4db8d8;
         }
         
-        .contact-card h3 {
+        .contact-info-box h3 {
             color: #4db8d8;
-            margin-bottom: 20px;
-            font-size: 20px;
+            margin-bottom: 25px;
+            font-size: 22px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
-        .contact-item {
-            margin-bottom: 15px;
-            font-size: 16px;
-            line-height: 1.8;
+        .info-item {
+            margin-bottom: 20px;
         }
         
-        .contact-item a {
+        .info-label {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-value {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .info-value a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
         }
         
-        .contact-item a:hover {
+        .info-value a:hover {
             color: #4db8d8;
         }
         
         .whatsapp-cta {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 60px;
         }
         
         .whatsapp-btn {
             background: #25D366;
             color: white;
-            padding: 20px 50px;
+            padding: 22px 55px;
             border-radius: 35px;
             text-decoration: none;
             font-weight: 600;
@@ -310,20 +525,29 @@
         .footer p {
             opacity: 0.8;
             font-size: 14px;
+            margin-bottom: 5px;
         }
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
             .hero h1 {
-                font-size: 32px;
+                font-size: 36px;
+            }
+            
+            .hero .subtitle {
+                font-size: 20px;
             }
             
             .hero p {
-                font-size: 18px;
+                font-size: 16px;
             }
             
             .logo-text {
-                font-size: 20px;
+                font-size: 22px;
             }
             
             .section {
@@ -331,10 +555,18 @@
             }
             
             .section-title {
-                font-size: 28px;
+                font-size: 30px;
             }
             
             .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-content {
                 grid-template-columns: 1fr;
             }
             
@@ -355,9 +587,15 @@
     <header class="header">
         <div class="nav-container">
             <div class="logo">
-                <img src="./website Task Eagles - Reliable Errand &amp; Personal Shopper Services in Abuja_files/dc4914b0-3834-4417-a59e-6ef7ca286362-removebg-preview.png" alt="Task Eagles Logo">
+                <img src="https://i.ibb.co/zhxyWb5g/dc4914b0-3834-4417-a59e-6ef7ca286362-removebg-preview.png" alt="Task Eagles Logo">
                 <span class="logo-text">TASK EAGLES</span>
             </div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#contact">Contact</a>
+            </nav>
             <a href="https://wa.me/2348173782942" class="cta-button">📱 WhatsApp Us</a>
         </div>
     </header>
@@ -365,110 +603,215 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <h1>Don't Let Your Errands Run You</h1>
-            <p>Professional errand and personal shopper services in Abuja. We handle the tasks so you can focus on what truly matters.</p>
+            <h1>Your Time is Valuable</h1>
+            <p class="subtitle">Don't Let Your Errands Run You</p>
+            <p>Professional errand and personal shopper services across Abuja. We handle your daily tasks with reliability and care, so you can focus on what truly matters in your life and business.</p>
             <div class="hero-buttons">
                 <a href="https://wa.me/2348173782942" class="btn-primary">Get Started Today</a>
-                <a href="file:///C:/Users/bloss/Downloads/task-eagles-website.html#services" class="btn-secondary">View Our Services</a>
+                <a href="#services" class="btn-secondary">View Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <h2 class="section-title">About Task Eagles</h2>
+        <p class="section-subtitle">Your trusted partner for reliable errand services in Abuja</p>
+        <div class="about-content">
+            <p>Task Eagles is Abuja's premier errand and personal shopper service, dedicated to making your life easier. We understand that time is your most valuable resource, and we're here to give it back to you.</p>
+            <p>Whether you're a busy professional, a parent juggling multiple responsibilities, or a business looking to improve productivity, Task Eagles provides reliable, efficient, and professional service you can trust.</p>
+            <p>Our team is committed to handling your tasks with the same care and attention you would give them yourself. From simple grocery runs to complex errands, we're your partner in reclaiming your time.</p>
+            
+            <div class="about-stats">
+                <div class="stat-box">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Tasks Completed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Locations in Abuja</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section how-it-works" id="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Getting started with Task Eagles is simple and straightforward</p>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Contact Us</h3>
+                <p>Reach out via WhatsApp, phone, or our website. Tell us what you need help with and when you need it done.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>We Plan</h3>
+                <p>We'll discuss the details, understand your requirements, and provide a quote. No hidden fees, just transparent pricing.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>We Execute</h3>
+                <p>Our professional team handles your errand with care and efficiency. We keep you updated throughout the process.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>You Relax</h3>
+                <p>Sit back and enjoy your free time while we complete your tasks. Delivery and updates guaranteed!</p>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="section" id="services">
+    <section class="section" id="services" style="background: #f8f9fa;">
         <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive errand solutions tailored to your needs</p>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🛒</div>
-                <h3>Market Runs &amp; Grocery Shopping</h3>
-                <p>We'll handle your grocery shopping and market runs, delivering fresh items right to your doorstep.</p>
+                <span class="service-icon">🛒</span>
+                <h3>Market Runs & Grocery Shopping</h3>
+                <p>Save hours at the market. We'll shop for fresh groceries, household items, and everything on your list. Quality checked and delivered to your doorstep.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🚌</div>
-                <h3>School Runs &amp; Pickups</h3>
-                <p>Safe and reliable transportation for your children to and from school.</p>
+                <span class="service-icon">🚌</span>
+                <h3>School Runs & Pickups</h3>
+                <p>Reliable and safe transportation for your children. Professional drivers, punctual service, and peace of mind for busy parents.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">✈️</div>
+                <span class="service-icon">✈️</span>
                 <h3>Airport Pickup/Drop Off</h3>
-                <p>Stress-free airport transfers for you, your family, or guests.</p>
+                <p>Stress-free airport transfers for you, family, or business guests. Timely, comfortable, and professional service every time.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🍽️</div>
+                <span class="service-icon">🍽️</span>
                 <h3>Food Delivery</h3>
-                <p>Hot meals delivered from your favorite restaurants and fast food joints.</p>
+                <p>Craving your favorite meal? We'll pick up hot, fresh food from any restaurant or fast food joint and deliver it straight to you.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">👕</div>
-                <h3>Laundry Pickup/Drop Off</h3>
-                <p>We collect, wash, and return your laundry fresh and clean.</p>
+                <span class="service-icon">👕</span>
+                <h3>Laundry Services</h3>
+                <p>Pickup, wash, and delivery of your laundry. Clean, fresh clothes returned to you without lifting a finger.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🏡</div>
-                <h3>Housekeeping</h3>
-                <p>Eco-friendly and flexible housekeeping services tailored to your needs.</p>
+                <span class="service-icon">🏡</span>
+                <h3>Eco-Friendly Housekeeping</h3>
+                <p>Professional cleaning services using eco-friendly products. Flexible scheduling to match your lifestyle and preferences.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h3>Custom Errands &amp; More</h3>
-                <p>Anything you don't have time to do - we've got you covered!</p>
+                <span class="service-icon">⚡</span>
+                <h3>Custom Errands</h3>
+                <p>Bill payments, document submission, package pickup, pharmacy runs - if you don't have time for it, we'll handle it for you.</p>
             </div>
         </div>
     </section>
 
-    <!-- Perfect For Section -->
-    <section class="section perfect-for">
-        <h2 class="section-title">Perfect For</h2>
-        <div class="perfect-tags">
-            <span class="perfect-tag">✓ Busy Parents</span>
-            <span class="perfect-tag">✓ Full-Time Workers</span>
-            <span class="perfect-tag">✓ Busy Employees</span>
-            <span class="perfect-tag">✓ Businesses</span>
-            <span class="perfect-tag">✓ Anyone Who Values Time</span>
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Real experiences from people we've helped</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">Task Eagles saved my week! As a working mom, I barely have time to breathe. They handled my grocery shopping and school pickups seamlessly. Highly professional!</p>
+                <div class="testimonial-author">Mrs. Amaka Johnson</div>
+                <div class="testimonial-role">Business Executive, Wuse</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">Reliable, efficient, and trustworthy. I use Task Eagles for my company's errands and they never disappoint. Great value for the service provided.</p>
+                <div class="testimonial-author">Mr. Chidi Okonkwo</div>
+                <div class="testimonial-role">Business Owner, Maitama</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">The airport pickup service was excellent! Professional driver, clean vehicle, and right on time. Will definitely use them again.</p>
+                <div class="testimonial-author">Dr. Sarah Adekunle</div>
+                <div class="testimonial-role">Medical Professional, Garki</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about our services</p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    How much do your services cost?
+                </div>
+                <div class="faq-answer">
+                    Our pricing varies based on the type of service, distance, and complexity of the task. Contact us for a personalized quote. We offer competitive rates with no hidden fees.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer same-day service?
+                </div>
+                <div class="faq-answer">
+                    Yes! We offer same-day service for most errands, subject to availability. Contact us as early as possible for best results.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What areas do you cover in Abuja?
+                </div>
+                <div class="faq-answer">
+                    We provide services across Abuja and FCT, including Wuse, Maitama, Garki, Asokoro, Gwarinpa, Mpape, and surrounding areas. Contact us to confirm coverage for your specific location.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I pay for services?
+                </div>
+                <div class="faq-answer">
+                    We accept cash, bank transfers, and mobile payments. Payment details will be provided when you book your service.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Are your staff trained and trustworthy?
+                </div>
+                <div class="faq-answer">
+                    Absolutely. All our team members are carefully vetted, trained, and insured. We take your trust and security seriously.
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section contact-section">
+    <section class="section contact-section" id="contact">
         <h2 class="section-title" style="color: white;">Get In Touch</h2>
-        <div class="contact-grid">
-            <div class="contact-card">
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Ready to reclaim your time? Contact us today!</p>
+        <div class="contact-content">
+            <div class="contact-info-box">
                 <h3>Our Locations</h3>
-                <div class="contact-item">
-                    <strong>Office 1:</strong><br>
-                    Suits D002B Cater Plaza, Ademola Adetokunbo Crescent, Wuse II, Abuja
+                <div class="info-item">
+                    <div class="info-label">Office 1</div>
+                    <div class="info-value">Suits D002B Cater Plaza, Ademola Adetokunbo Crescent, Wuse II, Abuja</div>
                 </div>
-                <div class="contact-item">
-                    <strong>Office 2:</strong><br>
-                    Suit A3 Omega Plaza, Mpape, FCT
+                <div class="info-item">
+                    <div class="info-label">Office 2</div>
+                    <div class="info-value">Suit A3 Omega Plaza, Mpape, FCT</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Business Hours</div>
+                    <div class="info-value">Monday - Saturday: 7:00 AM - 8:00 PM<br>Sunday: 9:00 AM - 5:00 PM</div>
                 </div>
             </div>
             
-            <div class="contact-card">
-                <h3>Contact Us</h3>
-                <div class="contact-item">
-                    📞 <strong>Phone:</strong><br>
-                    <a href="tel:09028896821">09028896821</a>, <a href="tel:07025661351">07025661351</a>
-                </div>
-                <div class="contact-item">
-                    💬 <strong>WhatsApp:</strong><br>
-                    <a href="https://wa.me/2348173782942">08173782942</a>
-                </div>
-                <div class="contact-item" style="margin-top: 20px; opacity: 0.9;">
-                    Available for all your errand needs across Abuja and FCT
-                </div>
-            </div>
-        </div>
-        
-        <div class="whatsapp-cta">
-            <a href="https://wa.me/2348173782942" class="whatsapp-btn">💬 Chat With Us on WhatsApp</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2024 Task Eagles. All rights reserved.</p>
-        <p style="margin-top: 10px;">Powered by Lady B Bath Ventures Int.</p>
-    </footer>
-
-</body></html>
+            <div class="contact-info-box">
+                <h3>Contact Information</h3>
+                <div class="info-item">
+                    <div class="info-label">Phone Numbers</div>
+                    <div class="info-value">
+                        <a href="tel:09028896821">09028896821</a><br>
+                        <a href="tel:07025661351">07025661351
